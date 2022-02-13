@@ -195,7 +195,8 @@ header .second-part-logo {
   margin-left: auto;
   margin-right: auto;
   background-color: #2f303a;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -229,6 +230,11 @@ header .second-part-logo {
   margin-right: auto;
   margin-top: 30px;
   padding: 0;
+}
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: #188ce8;
+  transition: background-color 250ms var(--main-timing-function);
 }
 
 /* MAIN-ADVANTAGES */
@@ -337,7 +343,8 @@ header .second-part-logo {
 .team-item {
   width: calc((100%-30px * 3) / 4);
   background-color: #fff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 .team-item-title {
@@ -444,6 +451,7 @@ header .second-part-logo {
 }
 .container-address {
   margin-right: 70px;
+  width: 231px;
 }
 
 /* FOOTER-LOGO */
@@ -480,7 +488,12 @@ footer .phone-link {
 .geo-link:focus {
   color: var(--active-color);
 }
-.container-social-title {
+
+/* FOOTER SOCIAL */
+.container-social {
+  margin-right: 93px;
+}
+.container-title {
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -515,13 +528,72 @@ footer .phone-link {
   fill: #ffffff;
 }
 
+/* FORM */
+.container-footer-form {
+  width: 570px;
+}
+.footer-form {
+  display: flex;
+}
+.footer-form-label {
+  margin-right: 12px;
+}
+
+.footer-form-input {
+  width: 358px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 16px 15px;
+
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-form-input::placeholder {
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  margin-left: 16px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: #2196f3;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: unset;
+  width: 200px;
+  height: 50px;
+  padding: 0;
+}
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+  background-color: #188ce8;
+  transition: background-color 250ms var(--main-timing-function);
+}
+.footer-form-btn-icon {
+  margin-left: 10px;
+  fill: #ffffff;
+}
 /* MODAL WINDOW */
 /* BACKDROP */
 .backdrop {
   position: fixed;
   top: 0;
   left: 0;
-  transition: opacity 250ms var(--main-timing-function), visibility 250ms var(--main-timing-function);
+  transition: opacity 250ms var(--main-timing-function),
+    visibility 250ms var(--main-timing-function);
 
   width: 100vw;
   height: 100vh;
@@ -544,13 +616,161 @@ footer .phone-link {
 
   width: 528px;
   height: 581px;
+  padding: 40px;
 
   background-color: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* MODAL FORM */
+.modal-form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  letter-spacing: 0.03em;
+  color: #212121;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.modal-form-label {
+  display: block;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: #757575;
+  margin-bottom: 10px;
+}
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 0 42px;
+  transition: border-color 250ms var(--main-timing-function);
+}
+.modal-form-input:focus {
+  border-color: #2196f3;
+  outline: none;
+}
+.modal-form-input:focus + .modal-form-icon {
+  fill: #2196f3;
+}
+.modal-form-input:not(:placeholder-shown) {
+  border-color: #2196f3;
+}
+.modal-form-input:not(:placeholder-shown) + .modal-form-icon {
+  fill: #2196f3;
+}
+.modal-form-input-wrap {
+  display: block;
+  position: relative;
+  margin-top: 4px;
+}
+.modal-form-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms var(--main-timing-function);
+}
+.modal-form-textarea-label {
+  display: block;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: #757575;
+  margin-bottom: 20px;
+}
+.modal-form-textarea {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+  padding: 12px 16px;
+  transition: border-color 250ms var(--main-timing-function);
+}
+.modal-form-textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-form-textarea:focus {
+  border-color: #2196f3;
+  outline: none;
+}
+.modal-form-textarea:not(:placeholder-shown) {
+  border-color: #2196f3;
+}
+.modal-form-checkbox-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-form-checkbox-input:checked ~ .modal-form-checkbox-icon {
+  fill: #2196f3;
+  border: none;
+}
+.modal-form-checkbox-label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: #757575;
+  padding-left: 23px;
+}
+.modal-form-contract-link {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: #2196f3;
+}
+.modal-form-checkbox-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 2px solid #212121;
+  border-radius: 2px;
+  fill: transparent;
+  transition: fill 250ms var(--main-timing-function), border 0ms var(--main-timing-function) 250ms;
+}
+.modal-form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  padding: 0;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: #2196f3;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: unset;
+  transition: background-color 250ms var(--main-timing-function);
+}
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+  background-color: #188ce8;
 }
 .modal-close-btn {
   position: absolute;
@@ -594,8 +814,8 @@ footer .phone-link {
   border: none;
   padding: 6px 22px;
 
-  transition: background-color 250ms var(--main-timing-function), color 250ms var(--main-timing-function),
-    box-shadow 250ms var(--main-timing-function);
+  transition: background-color 250ms var(--main-timing-function),
+    color 250ms var(--main-timing-function), box-shadow 250ms var(--main-timing-function);
 }
 .filter-list > .filter-item:not(:last-child) {
   margin-right: 8px;
@@ -604,7 +824,8 @@ footer .phone-link {
 .filter-btn:focus {
   color: #ffffff;
   background-color: var(--active-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .portfolio {
   padding-top: 94px;
@@ -631,7 +852,8 @@ footer .phone-link {
 
 .projects-link:hover,
 .projects-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .project-link-wrap {
   position: relative;

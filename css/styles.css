@@ -710,25 +710,27 @@ footer .phone-link {
 .modal-form-textarea:not(:placeholder-shown) {
   border-color: #2196f3;
 }
-.modal-form-checkbox-wrap {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .modal-form-checkbox-input:checked ~ .modal-form-checkbox-icon {
   fill: #2196f3;
   border: none;
 }
 .modal-form-checkbox-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 30px;
+
   font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: #757575;
-  padding-left: 23px;
 }
 .modal-form-contract-link {
+  margin-left: 5px;
+
   font-weight: normal;
   font-size: 14px;
   line-height: calc(24 / 14);
@@ -737,10 +739,8 @@ footer .phone-link {
   color: #2196f3;
 }
 .modal-form-checkbox-icon {
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-right: 8px;
+
   border: 2px solid #212121;
   border-radius: 2px;
   fill: transparent;
@@ -753,7 +753,6 @@ footer .phone-link {
   width: 200px;
   height: 50px;
   padding: 0;
-  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
